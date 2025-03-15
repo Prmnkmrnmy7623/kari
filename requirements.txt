@@ -1,0 +1,7 @@
+telebot
+requests
+pymongo
+certifi
+aiohttp
+aiolimiter
+asyncio==3.4.3
